@@ -1,0 +1,46 @@
+.pwa {
+    display: none;
+}
+@media only screen and (max-width: 767px) {
+    .pwa {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        background: #2d383e;
+        padding: 10px 10px;
+        align-items: center;
+        justify-content: space-between;
+        color: #d4cece;
+        font: 16px/1 Arial;
+        width: calc(100% - 20px);
+        z-index: 99;
+        transition: bottom 500ms;
+    }
+    .pwa-btn {
+        display: inline-flex;
+        position: relative;
+        width: calc(100% - 32px);
+    }
+    .pwa-btn img {
+        position: relative;
+        margin-right: 10px;
+    }
+    .pwa-close {
+        display: inline-block;
+        position: relative;
+        left: -28px;
+    }
+    .pwa-close:before, .pwa-close:after {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 3px;
+        background: #d4cece;
+    }
+    .pwa-close:before {
+        transform: rotate(45deg);
+    }
+    .pwa-close:after {
+        transform: rotate(-45deg);
+    }
+}
